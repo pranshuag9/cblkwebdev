@@ -1,0 +1,302 @@
+Ans1:
+JavaScript is a interpreted programming language which runs code line by line.
+
+There are 7 datatypes in JS:
+1. Number
+2. Boolean
+3. String
+4. undefined
+5. null
+6. BigInt
+7. Symbol
+
+-----------------------------
+Ans2:
+a. -20
+b.  true
+    false
+    false
+c.  14
+    23
+    37
+d. 
+function eligibleVoter(age){
+    if(typeof age == "number"){
+        return age >= 18;
+    }
+    return false;
+}
+let age = Number(prompt("enter your age:"));
+var isEligibleVoter = eligibleVoter(age);
+if(isEligibleVoter){
+    console.log(`Age ${age} is eligible voter`);
+}
+else{
+    console.log(`Age ${age} is not eligible voter.`)
+}
+
+e.
+function getRandomNumberBetween(min, max){
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+console.log(getRandomNumberBetween(7, 32));
+
+-----------------------------
+Ans3:
+Objects are collection of properties in form of key: value pair.
+
+- Error is calling kuchbhi2.sam(). It should be kuchbhi2.fn().
+and 2nd error is this.dsa+this.web should be this.a+this.b;
+
+Output is:
+i am doing adavance js
+30
+
+-----------------------------
+Ans4:
+Array in JS is a ordered/linear data structure.
+It is heterogenous in JS, means it can store different data types
+in single array.
+
+Example:
+let arr = [1, 2, 3, 4, "Mango", "Apple", 3.142, null, undefined];
+for(let i=0; i<arr.length; i++){
+    console.log(`${arr[i]} is stored at ${i} index.`)
+}
+
+-----------------------------
+Ans5:
+It is a nested array.
+Index of 2002 is (2, 1, 1) and can be accessed by arr[2][1][1];
+
+-----------------------------
+Ans6:
+let naam = naam2.trim();
+console.log(naam.length);
+
+Ans7:
+push will insert element to end of array.
+pop will remove element from end of array.
+unshift will insert element to start of array.
+shift will remove element from start of array.
+
+let arr = [1, 2, 3, 4, "Mango", "Apple", 3.142, null, undefined];
+console.log(arr.push(10));
+console.log(arr);
+console.log(arr.pop());
+console.log(arr);
+console.log(arr.unshift(10));
+console.log(arr);
+console.log(arr.shift());
+console.log(arr);
+
+Output:
+10
+[1, 2, 3, 4, "Mango", "Apple", 3.142, null, undefined, 10]
+10
+[1, 2, 3, 4, "Mango", "Apple", 3.142, null, undefined]
+10
+[10, 1, 2, 3, 4, "Mango", "Apple", 3.142, null, undefined]
+10
+[1, 2, 3, 4, "Mango", "Apple", 3.142, null, undefined]
+
+-----------------------------
+Ans8:
+for-of and for-in are both used to iterate over an iterable like array.
+for-of gives an item whereas for-in gives index of item.
+
+Example:
+for(item of arr){
+    console.log(item);
+}
+Output:
+1
+2
+3
+4
+Mango
+Apple
+3.142
+null
+undefined
+
+for(item in arr){
+    console.log(item);
+}
+
+Output:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+
+------------------------------
+Ans9:
+var, let & const works differently.
+
+var have global and functional scope.
+let & const have script and block scope.
+
+accessing var declared variable before it is declared gives undefined.
+Whereas let & const gives error from DTZ when tried to access before declaring.
+
+------------------------------
+Ans10:
+JS code works in JSEngine. JSEngine is present in browser only, so it works in browser.
+It runs line by line. 
+First a global execution context is created and sits on top of callstack.
+Inside that global execution context(GEC), all the variables and functions 
+are read in Memory Creation phase(MCP) and then code executes line by line 
+in Code Execution Phase(CEP). When variables and functions are read, 
+only their names are read and assigned undefined value.
+When code executes, values are assigned to them based on current executing line.
+
+Example:
+console.log(a);
+var a = 10;
+console.log(a);
+
+Output:
+undefined
+10
+
+First GEC sits in callstack. 'a' is read and assigned undefined in MCP.
+then CEP executes, and prints value of 'a' which is undefined.
+2nd line resets value to 10.
+3rd line prints value of 'a' as 10 because it is now modified.
+
+-------------------------------
+Ans11a:
+0
+undefined
+rahul
+1
+undefined
+prajapati
+2
+undefined
+22
+3
+undefined
+white
+4
+undefined
+true
+
+-------------------------------
+Ans11b:
+10
+20
+10
+
+-------------------------------
+Ans11c:
+10
+100
+
+-------------------------------
+Ans11d:
+10
+100
+100
+
+-------------------------------
+Ans11e:
+20
+100
+100
+
+-------------------------------
+Ans11f:
+inside a
+inside b
+
+-------------------------------
+Ans11g:
+function y()
+7
+
+-------------------------------
+Ans11h:
+1
+2
+
+-------------------------------
+Ans11i:
+hello test kesa hai
+10
+10
+
+-------------------------------
+Ans11j:
+baba is not defined.
+
+-------------------------------
+Ans12:
+Hoisting means declaring variables and functions in MCP before code executes and assigning them undefined value.
+In case of var, its undefined. and in case of let & const, it causes DTZ error.
+
+-------------------------------
+Ans13:
+DTZ means Dead Temporal Zone. It is zone which checks for any errors before its execution. 
+
+-------------------------------
+Ans14:
+Scoping in JS means scoping defining scope of variables declared.
+var has functional and global scope.
+let & const has script and block scope.
+
+Global scope means variable declared with var will be accessible in all the Execution contexts
+in current and its above execution contexts.
+
+Functional Scope means variable declared with var will be accessible and modifiable only inside
+that function's execution context and its above execution contexts.
+
+Script scope means variables declared with let & const will be accessible inside that script only.
+and any changes to those variables inside script will affect their values.
+
+Block Scope means variables declared with let & const inside a block {} will be accessible inside that block only.
+and and changes to those variables will affect its value inside that block only.
+
+-------------------------------
+Ans15:
+Higher order functions are functions which takes another function as argument or returns a function.
+Example:
+function higherOrderFunction(callback){
+    console.log("Inside Higher Order Function");
+    callback();
+}
+function higherOrderFunction(){
+    console.log("Inside Higher Order Function");
+    return function(){
+        console.log("Inside Callback Function");
+    }
+}
+
+-------------------------------
+Ans16:
+Closure is a function which has access to its outer function's scope even after the outer function has finished executing.
+Example:
+function outerFunction(){
+    let a = 10;
+    return function innerFunction(){
+        console.log(a);
+    }
+}
+
+-------------------------------
+Ans17:
+Callback functions are functions which are passed as argument to another function and are executed inside that function.
+Example:
+function higherOrderFunction(callback){
+    console.log("Inside Higher Order Function");
+    callback();
+}
+higherOrderFunction(function(){
+    console.log("Inside Callback Function");
+});

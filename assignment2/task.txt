@@ -1,0 +1,357 @@
+1. greet with both names:
+     let obj = {
+         firstName : "Samarth" , 
+         lastName : "Vohra"
+     }
+ans:
+    console.log(`Hello ${obj.firstName} ${obj.lastName}`)
+-----------------------------------------
+2. greet if gender is male
+     let obj = {
+         firstName : "Samarth" , 
+         lastName : "Vohra" ,
+         gender : "male"
+     }
+ans:
+    if(obj.gender === "male"){
+        console.log(`Hello Mr. ${obj.firstName} ${obj.lastName}`)
+    }
+-----------------------------------------
+3. write a code which prints from 0 to 1000 (for loop)
+ans:
+    for(let i=0 ; i<=1000 ; i++){
+        console.log(i)
+    }
+-----------------------------------------
+4. write a code to calculate sum from 0 to 1000 and print at the end
+ans:
+    let sum = 0;
+    for(let i=0 ; i<=1000 ; i++){
+        sum += i;
+    }
+    console.log(sum)
+-----------------------------------------
+5. write a prog. to print even numbers in an array
+     let arr = [10,33,45,22,100,98]
+ans:
+    for(let i=0 ; i<arr.length ; i++){
+        if(arr[i] % 2 === 0){
+            console.log(arr[i])
+        }
+    }
+-----------------------------------------
+6. write a prog. to print the largest number of an array
+    let arr = [10,33,45,22,100,98]
+ans:
+    let max = arr[0];
+    for(let i=1 ; i<arr.length ; i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+    console.log(max)
+-----------------------------------------
+7. write a prog. that prints the name of all the male people in a object given
+    let user = [
+        {
+            naam:"samarth" , 
+            isMale: true
+        },
+        {
+            naam:"kashish" , 
+            isMale: true
+        },
+        {
+            naam:"maverick" , 
+            isMale: false
+        }
+    ]
+ans:
+    for(let i=0 ; i<user.length ; i++){
+        if(user[i].isMale){
+            console.log(user[i].naam)
+        }
+    }
+-----------------------------------------
+8. reverse all the elements of an array
+    let arr = [10,33,45,22,100,98]
+ans:
+arr.reverse();
+console.log(arr)
+-----------------------------------------
+9. write function to give sum of 2 numbers
+ans:
+    function sum(a,b){
+        return a+b;
+    }
+    console.log(sum(2,3))
+-----------------------------
+10 to 13.
+
+var x = 1;
+console.log(x);
+function a(){
+    x=10;
+    console.log(x);
+}
+
+a();
+
+Outpput:
+1
+10
+
+// -----------------------------------
+
+let x = 10;
+console.log(x);
+function a(){
+    x=100;
+    console.log(x);
+}
+a();
+x=1000;
+
+Output;
+10
+100
+
+// -----------------------------------
+
+const x = 100;
+console.log(x);
+function a(){
+    x=10;
+    console.log(x);
+}
+a();
+
+Output:
+100
+Error
+
+// -----------------------------------
+
+function a(){
+    console.log(x);
+}
+a();
+var x=2
+
+Output:
+undefined
+
+// -----------------------------------
+
+let x;
+function b(){
+    console.log(x);
+}
+b();
+x=2;
+
+Output:
+undefined
+
+// -----------------------------------
+
+function a(){
+    console.log(x);
+}
+a();
+let x=2 
+
+Output:
+Error
+
+// -----------------------------------
+
+var a=1;
+let b=2;
+{
+    var a = 10;
+    let b = 20;
+    const c = 30;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+console.log(b);
+
+Output:
+10
+20
+30
+2
+
+// ----------------------------------
+ 
+
+ function x(){
+     var a =7;
+     function y(){
+         console.log(a);
+     }
+     return y;
+ }
+ var z =  x();
+ console.log(z);
+ z();
+
+Output:
+ƒ y(){
+    console.log(a);
+}
+
+-----------------------------
+14. string methods -> length , toUpperCase() , toLowerCase() , trim() , split() , reverse() , replace() , replaceAll() , slice() , splice() , indexOf() , lastIndexOf(), concat()
+
+Answer:
+length -> returns the length of the string
+toUpperCase() -> converts the string to uppercase
+toLowerCase() -> converts the string to lowercase
+trim() -> removes the white spaces from the start and end of the string
+split() -> splits the string into an array of substrings
+reverse() -> reverses the string
+replace() -> replaces a specified value with another value in a string
+replaceAll() -> replaces all the occurences of a specified value with another value in a string
+slice() -> extracts a part of a string and returns a new string
+splice() -> adds/removes items to/from an array, and returns the removed item(s)
+indexOf() -> returns the position of the first occurrence of a specified value in a string
+lastIndexOf() -> returns the position of the last occurrence of a specified value in a string
+concat() -> joins two or more strings, and returns a new joined string
+
+    let str = "      Pranshu Aggarwal   "
+    console.log(str.length)
+    console.log(str.toUpperCase())
+    console.log(str.toLowerCase())
+    console.log(str.trim())
+    console.log(str.split(" "))
+    console.log(str.split(" ").reverse())
+    console.log(str.replace("a" , "x"))
+    console.log(str.replace(/a/g , "x"))
+    console.log(str.slice(2,5))
+    console.log(str.slice(-5))
+    console.log(str.slice(5,-5))
+    console.log(str.reverse())
+    console.log(str.indexOf("r"))
+    console.log(str.lastIndexOf("r"))
+    console.log(str.concat(" is a good developer"))
+
+-----------------------------
+15. array methods -> push() , pop() , ushift() , shift() , concat() , forEach() , map() , filter() ,  reduce() , find() , sort()
+answer:
+push() -> adds element at the end of the array
+pop() -> removes element from the end of the array
+unshift() -> adds element at the start of the array
+shift() -> removes element from the start of the array
+concat() -> joins 2 arrays
+forEach() -> iterates over the array
+map() -> creates a new array with the results of provided callback function on every element in the array
+filter() -> creates a new array with all elements that pass the test implemented by the provided callback function
+reduce() -> executes a reducer function on each element of the array, resulting in a single output value
+find() -> returns the first element in the array that satisfies the provided testing function
+sort() -> sorts the elements of an array in place and returns the array
+-----------------------------
+
+16. What are static methods?
+    Date() constructor function --> code:  let nayaDin =  new Date();
+    console.log(nayaDin.getDate())
+    console.log(nayaDin.getMonth() + 1)
+    console.log(nayaDin.getFullYear())
+    console.log(nayaDin.getHours() - 12)
+    console.log(nayaDin.getMinutes())
+    console.log(nayaDin.getSeconds())
+    console.log(nayaDin.getTime())
+
+answer:
+    static methods are those methods which are called on the class itself and not on the object of the class. 
+    They are defined using the static keyword. 
+    They are generally used to create utility functions.
+    Date() constructor function has static methods like getDate() , getMonth() , getFullYear() , getHours() , getMinutes() , getSeconds() , getTime()
+
+    Output:
+    17
+    9
+    2021
+    5
+    45
+    30
+    1631847930000
+
+-----------------------------
+17. Math method -> Math.random() , floor() , ceil() , round() , sqrt() , max() , min() , pow() , PI , LN2
+
+answer:
+    Math.random() -> returns a random number between 0 and 1
+    Math.floor() -> returns the largest integer less than or equal to a given number
+    Math.ceil() -> returns the smallest integer greater than or equal to a given number
+    Math.round() -> returns the value of a number rounded to the nearest integer
+    Math.sqrt() -> returns the square root of a number
+    Math.max() -> returns the largest of zero or more numbers
+    Math.min() -> returns the smallest of zero or more numbers
+    Math.pow() -> returns the value of a number raised to the power of another number
+    Math.PI -> returns the value of PI
+    Math.LN2 -> returns the natural logarithm of 2
+
+    console.log(Math.random())
+    console.log(Math.floor(2.9))
+    console.log(Math.ceil(2.1))
+    console.log(Math.round(2.5))
+    console.log(Math.sqrt(16))
+    console.log(Math.max(2,3,4,5,6,7,8,9))
+    console.log(Math.min(2,3,4,5,6,7,8,9))
+    console.log(Math.pow(2,3))
+    console.log(Math.PI)
+    console.log(Math.LN2)
+
+    Output:
+    0.123456789
+    2
+    3
+    3
+    4
+    9
+    2
+    8
+    3.141592653589793
+    0.6931471805599453
+-----------------------------
+18. let obj = {
+        naam : "bhakaali", 
+        umar : 27 , 
+        isZinda : function(){
+            return `haa mai zinda hu`
+        }
+    }
+    console.log(obj)
+    console.log(Object.keys(obj))
+    console.log(Object.values(obj))
+    console.log(Object.entries(obj))
+    console.log(obj.hasOwnProperty('age'))  //odd one out as it works on obj not on JS class (static method)
+    console.log(Object.assign(obj , {newProperty:"new Value"}))
+    console.log(Object.assign({} , obj , {newProperty:"new Value"}))
+
+answer:
+    Object.keys() -> returns an array of a given object's own enumerable property names
+    Object.values() -> returns an array of a given object's own enumerable property values
+    Object.entries() -> returns an array of a given object's own enumerable string-keyed property [key, value] pairs
+    Object.hasOwnProperty() -> returns a boolean indicating whether the object has the specified property as its own property (not inherited)
+    Object.assign() -> copies the values of all enumerable own properties from one or more source objects to a target object. It returns the target object.
+
+    Output:
+    {naam: "bhakaali", umar: 27, isZinda: ƒ}
+    ["naam", "umar", "isZinda"]
+    ["bhakaali", 27, ƒ]
+    [Array(2), Array(2), Array(2)]
+    false
+    {naam: "bhakaali", umar: 27, isZinda: ƒ, newProperty: "new Value"}
+    {naam: "bhakaali", umar: 27, isZinda: ƒ, newProperty: "new Value"}
+-----------------------------
+19. loupe -> http://latentflip.com/loupe/ -> visually how js is being run actually like we do in browser with breakpoints
+
+answer:
+    loupe is a tool which shows how the javascript code is being executed in the browser. 
+    It shows the call stack , heap , event loop , etc. 
+    It is a visual representation of the code execution.
